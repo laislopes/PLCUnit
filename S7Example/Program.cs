@@ -1,5 +1,6 @@
 ﻿using S7.Net;
 using S7.Net.Types;
+using S7Example.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,35 +13,14 @@ namespace S7Example
     {
         static void Main(string[] args)
         {
-            using (var plc = new Plc(CpuType.S71500, "127.0.0.1", 0, 1))
+            using (var plc = new ProgrammingLogicController("127.0.0.1"))
             {
-                plc.Open();
-
-                ReadSingleVariables(plc);
-                WriteSingleVariable(plc);
+                plc.MapBitVariable("BotaoLigaMotor", 2, 0, 0)
+                   .MapBitVariable("Motor", 2, 0, 1)
+                   .SetValueByTag("BotaoLigaMotor", false)
+                   .GetValueByTag("Motor");
             }
         }
 
-        private static void ReadSingleVariables(Plc plc)
-        {
-            Console.WriteLine("\n--- DB 2 ---\n");
-
-            var db1Bool1 = plc.Read("DB2.DBX0.0");
-            Console.WriteLine("DB2.DBX0.0: " + db1Bool1);
-
-            var db1Bool2 = plc.Read("DB2.DBX0.1");
-            Console.WriteLine("DB2.DBX0.1: " + db1Bool2);
-
-        }
-
-        private static void WriteSingleVariable(Plc plc)
-        {
-            Console.WriteLine("\n--- DB 2 ---\n");
-
-            short db1WordVariable = 188;
-            plc.Write("DB2.DBX0.0", true);
-
-        }
-        
     }
 }

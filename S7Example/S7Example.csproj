@@ -46,8 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Db1.cs" />
-    <Compile Include="Db3.cs" />
+    <Compile Include="Domain\PLC\IPLCComunication.cs" />
+    <Compile Include="Domain\PLC\PLCProxy.cs" />
+    <Compile Include="Domain\ProgrammingLogicController.cs" />
+    <Compile Include="Domain\Types\Bit.cs" />
+    <Compile Include="Domain\Types\IType.cs" />
+    <Compile Include="Domain\Types\Word.cs" />
+    <Compile Include="Old\Db1.cs" />
+    <Compile Include="Old\Db3.cs" />
+    <Compile Include="Old\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +62,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
