@@ -56,7 +56,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\S7Example\PLC.csproj">
+    <ProjectReference Include="..\PLC\PLC.csproj">
       <Project>{669EE8F2-4231-4982-9054-6B109266B2DF}</Project>
       <Name>PLC</Name>
     </ProjectReference>
