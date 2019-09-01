@@ -4,7 +4,7 @@
 //using System.Text;
 //using System.Threading.Tasks;
 
-//namespace S7Example
+//namespace PLC
 //{
 //    class Db3
 //    {

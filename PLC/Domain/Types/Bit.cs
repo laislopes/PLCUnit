@@ -1,7 +1,7 @@
-﻿using S7Example.Domain.PLC;
+﻿using PLC.Domain.PLC;
 using System;
 
-namespace S7Example.Domain.Types
+namespace PLC.Domain.Types
 {
     public class Bit : IType
     {

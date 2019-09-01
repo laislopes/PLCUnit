@@ -1,4 +1,4 @@
-﻿namespace S7Example.Domain.Types
+﻿namespace PLC.Domain.Types
 {
     public interface IType
     {

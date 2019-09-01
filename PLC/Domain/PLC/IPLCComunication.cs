@@ -1,4 +1,4 @@
-﻿namespace S7Example.Domain.PLC
+﻿namespace PLC.Domain.PLC
 {
     public interface IPLCComunication
     {

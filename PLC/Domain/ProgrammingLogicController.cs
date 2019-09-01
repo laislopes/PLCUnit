@@ -1,14 +1,10 @@
-﻿using S7Example.Domain.PLC;
-using S7Example.Domain.Types;
+﻿using PLC.Domain.PLC;
+using PLC.Domain.Types;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
-namespace S7Example.Domain
+namespace PLC.Domain
 {
     public class ProgrammingLogicController : IDisposable
     {
