@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace S7Example.Domain
@@ -42,6 +43,7 @@ namespace S7Example.Domain
         {
             Console.WriteLine($"O dispositivo {tag} será {GetTextFromBoolean(value)}");
             _types[tag].SetValue(value);
+            Thread.Sleep(50);
             return this;
         }
 
