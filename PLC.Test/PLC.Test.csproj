@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PLC\PLC.csproj">
+    <ProjectReference Include="..\PLC\PLCUnit.csproj">
       <Project>{669EE8F2-4231-4982-9054-6B109266B2DF}</Project>
-      <Name>PLC</Name>
+      <Name>PLCUnit</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

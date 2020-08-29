@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.539
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLC", "PLC\PLC.csproj", "{669EE8F2-4231-4982-9054-6B109266B2DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLCUnit", "PLC\PLCUnit.csproj", "{669EE8F2-4231-4982-9054-6B109266B2DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLC.Test", "PLC.Test\PLC.Test.csproj", "{96416107-49E4-40C7-A882-15994ED21716}"
 EndProject
