@@ -14,7 +14,7 @@ namespace PLC.Teste
         {
             _plc = new ProgrammingLogicController("127.0.0.1");
             _plc.MapBitVariable("BotaoLigaMotor", 2, 0, 0)
-                .MapBitVariable("Motor", 2, 0, 1);
+                .MapBitVariable("Motor", 4, 0, 0);
         }
 
         [TestMethod]
