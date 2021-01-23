@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace PLC.Domain.PLC
 {
-    class PLCProxy : Plc, IPLCComunication
+    class PLCS71500 : Plc, IPLCComunication
     {
-        public PLCProxy(string ip)
+        public PLCS71500(string ip)
             : base(CpuType.S71500, ip, 0, 1)
         {
         }

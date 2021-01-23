@@ -8,13 +8,13 @@ namespace PLC.Domain
 {
     public class ProgrammingLogicController : IDisposable
     {
-        private IPLCComunication _plc;
-        private IDictionary<string, IType> _types;
+        private readonly IPLCComunication _plc;
+        private readonly IDictionary<string, IType> _types;
 
         public ProgrammingLogicController(string destinationHost)
         {
             _types = new Dictionary<string, IType>();
-            _plc = new PLCProxy(destinationHost);
+            _plc = new PLCS71500(destinationHost);
             _plc.Open();
             Console.WriteLine("Conexão com CLP estabelecida com sucesso!");
         }

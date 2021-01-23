@@ -62,14 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\PLC\IPLCComunication.cs" />
-    <Compile Include="Domain\PLC\PLCProxy.cs" />
+    <Compile Include="Domain\PLC\PLCS71500.cs" />
     <Compile Include="Domain\ProgrammingLogicController.cs" />
     <Compile Include="Domain\Types\Bit.cs" />
     <Compile Include="Domain\Types\IType.cs" />
     <Compile Include="Domain\Types\Word.cs" />
-    <Compile Include="Old\Db1.cs" />
-    <Compile Include="Old\Db3.cs" />
-    <Compile Include="Old\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
