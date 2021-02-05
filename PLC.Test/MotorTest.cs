@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PLC.Domain;
 
-namespace PLC.Teste
+namespace PLC.Test
 {
     [TestClass]
     public class UnitTest1
