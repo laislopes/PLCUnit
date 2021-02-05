@@ -1,23 +1,21 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PLC.Domain;
+using Xunit;
 
-namespace PLC.Test
+namespace PLC.Test.Motor
 {
-    [TestClass]
-    public class UnitTest1
+    public class MotorTest : IDisposable
     {
         private static ProgrammingLogicController _plc;
 
-        [TestInitialize]
-        public void Setup()
+        public MotorTest()
         {
             _plc = new ProgrammingLogicController("127.0.0.1");
             _plc.MapBitVariable("BotaoLigaMotor", 2, 0, 0)
                 .MapBitVariable("Motor", 4, 0, 0);
         }
 
-        [TestMethod]
+        [Fact]
         public void ShouldTurnOffMotorWhenPressPowerButtonAndMotorIsTurnedOn()
         {
             //Setup
@@ -28,10 +26,11 @@ namespace PLC.Test
 
             //Assert
             var motorStatus = Convert.ToBoolean(_plc.GetValueByTag("Motor"));
-            Assert.IsFalse(motorStatus);
+            Assert.False(motorStatus);
 
         }
-        [TestMethod]
+
+        [Fact]
         public void ShouldTurnOnMotorWhenPressPowerButtonAndMotorIsTurnedOff()
         {
             //Setup
@@ -42,7 +41,7 @@ namespace PLC.Test
 
             //Assert
             var motorStatus = Convert.ToBoolean(_plc.GetValueByTag("Motor"));
-            Assert.IsTrue(motorStatus);
+            Assert.True(motorStatus);
 
         }
 
@@ -52,8 +51,8 @@ namespace PLC.Test
             if (currentStatus != status)
                 _plc.SetValueByTag("BotaoLigaMotor", status);
         }
-        [AssemblyCleanup()]
-        public static void AssemblyCleanup()
+
+        public void Dispose()
         {
             _plc.Dispose();
         }
