@@ -4,6 +4,7 @@ using Xunit;
 
 namespace PLC.Test.BottleMachine
 {
+    [Collection("Serial")]
     public class StationOneBottleMachineTest : IDisposable
     {
         private static ProgrammingLogicController _plc;
