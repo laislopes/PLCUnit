@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLCUnit", "PLCUnit\PLCUnit.csproj", "{669EE8F2-4231-4982-9054-6B109266B2DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLC.Test", "PLC.xUnit.Test\PLC.Test.csproj", "{AB719783-C0CB-4737-9C8E-519D67F6DFB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PLC.Test", "PLC.Test\PLC.Test.csproj", "{477E8985-5A80-4F5E-87EE-41AD9059AD57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{669EE8F2-4231-4982-9054-6B109266B2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{669EE8F2-4231-4982-9054-6B109266B2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{669EE8F2-4231-4982-9054-6B109266B2DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB719783-C0CB-4737-9C8E-519D67F6DFB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB719783-C0CB-4737-9C8E-519D67F6DFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB719783-C0CB-4737-9C8E-519D67F6DFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB719783-C0CB-4737-9C8E-519D67F6DFB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{477E8985-5A80-4F5E-87EE-41AD9059AD57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{477E8985-5A80-4F5E-87EE-41AD9059AD57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{477E8985-5A80-4F5E-87EE-41AD9059AD57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{477E8985-5A80-4F5E-87EE-41AD9059AD57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
