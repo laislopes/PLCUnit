@@ -26,6 +26,7 @@ namespace PLC.Test.BottleMachine
             IList<bool> engineStatus = new List<bool>();
 
             //Test
+            _plc.SetValueByTag("Engine1", true);
             _plc.SetValueByTag("Sensor2", true);
             engineStatus.Add(Convert.ToBoolean(_plc.GetValueByTag("Engine2")));
             _plc.SetValueByTag("Sensor2", false);
@@ -35,39 +36,39 @@ namespace PLC.Test.BottleMachine
             Assert.All(engineStatus, status => Assert.True(status));
         }
 
-        //[Fact]
-        //public void ShouldNotTurnOnEngineTwoWhenSensorTwoIsNotActive()
-        //{
-        //    //Setup
-        //    SetEngineAs(false);
+        [Fact]
+        public void ShouldNotTurnOnEngineTwoWhenSensorTwoIsNotActive()
+        {
+            //Setup
+            SetEngineAs(false);
 
-        //    //Test
-        //    _plc.SetValueByTag("Sensor2", false);
+            //Test
+            _plc.SetValueByTag("Sensor2", false);
 
-        //    //Assert
-        //    var engineStatus = Convert.ToBoolean(_plc.GetValueByTag("Engine2"));
-        //    Assert.False(engineStatus);
+            //Assert
+            var engineStatus = Convert.ToBoolean(_plc.GetValueByTag("Engine2"));
+            Assert.False(engineStatus);
 
-        //}
+        }
+
+        [Fact]
+        public void ShouldNotTurnOnEngineTwoWhenEngineOneIsDisableAndSensorTwoDetectsTheBottle()
+        {
+            //Setup
+            SetEngineAs(false);
+
+            //Test
+            _plc.SetValueByTag("Engine1", false);
+            _plc.SetValueByTag("Sensor2", true);
+
+            //Assert
+            var engineStatus = Convert.ToBoolean(_plc.GetValueByTag("Engine2"));
+            Assert.False(engineStatus);
+
+        }
 
         //[Fact]
         //public void ShouldNotTurnOnEngineWhenExistsMoreThanOneBottleInCycle()
-        //{
-        //    //Setup
-        //    SetEngineAs(false);
-        //    _plc.SetValueByTag("Sensor1", true);
-
-        //    //Test
-        //    _plc.SetValueByTag("Sensor2", true);
-
-        //    //Assert
-        //    var engineStatus = Convert.ToBoolean(_plc.GetValueByTag("Engine2"));
-        //    Assert.False(engineStatus);
-
-        //}
-
-        //[Fact]
-        //public void ShouldStartOnEngineWhenExistsMoreThanOneBottleInCycle()
         //{
         //    //Setup
         //    SetEngineAs(false);
