@@ -25,8 +25,23 @@ namespace PLC.Test.BottleMachine
             _plc.SetValueByTag("Sensor1", true);
 
             //Assert
-            var motorStatus = Convert.ToBoolean(_plc.GetValueByTag("Engine1"));
-            Assert.True(motorStatus);
+            var engineStatus = Convert.ToBoolean(_plc.GetValueByTag("Engine1"));
+            Assert.True(engineStatus);
+
+        }
+
+        [Fact]
+        public void ShouldNotTurnOnEngineOneWhenSensorOneIsNotActive()
+        {
+            //Setup
+            SetEngineAs(false);
+
+            //Test
+            _plc.SetValueByTag("Sensor1", false);
+
+            //Assert
+            var engineStatus = Convert.ToBoolean(_plc.GetValueByTag("Engine1"));
+            Assert.False(engineStatus);
 
         }
 
