@@ -6,12 +6,12 @@ using System.Threading;
 
 namespace PLC.Domain
 {
-    public class ProgrammingLogicController : IDisposable
+    public class ProgrammableLogicController : IDisposable
     {
-        private readonly IPLCComunication _plc;
+        private readonly IPLCCommunication _plc;
         private readonly IDictionary<string, IType> _types;
 
-        public ProgrammingLogicController(string destinationHost)
+        public ProgrammableLogicController(string destinationHost)
         {
             _types = new Dictionary<string, IType>();
             _plc = new PLCS71500(destinationHost);
@@ -19,7 +19,7 @@ namespace PLC.Domain
             Console.WriteLine("Conexão com CLP estabelecida com sucesso!");
         }
 
-        public ProgrammingLogicController MapBitVariable(string tag,
+        public ProgrammableLogicController MapBitVariable(string tag,
                                                    int dbNumber,
                                                    int byteNumber,
                                                    int bitNumber)
@@ -35,7 +35,7 @@ namespace PLC.Domain
             return returnValue;
         }
 
-        public ProgrammingLogicController SetValueByTag(string tag, object value)
+        public ProgrammableLogicController SetValueByTag(string tag, object value)
         {
             Console.WriteLine($"O dispositivo {tag} será {GetTextFromBoolean(value)}");
             _types[tag].SetValue(value);

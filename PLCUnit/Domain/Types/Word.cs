@@ -5,11 +5,11 @@ namespace PLC.Domain.Types
 {
     class Word : IType
     {
-        private readonly IPLCComunication _pLCComunication;
+        private readonly IPLCCommunication _pLCComunication;
         private readonly int _dbNumber;
         private readonly int _wordNumber;
 
-        public Word(IPLCComunication pLCComunication,
+        public Word(IPLCCommunication pLCComunication,
                     int dbNumber,
                     int wordNumber)
         {

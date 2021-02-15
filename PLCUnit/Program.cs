@@ -13,7 +13,7 @@ namespace PLC
     {
         static void Main(string[] args)
         {
-            using (var plc = new ProgrammingLogicController("127.0.0.1"))
+            using (var plc = new ProgrammableLogicController("127.0.0.1"))
             {
                 plc.MapBitVariable("BotaoLigaMotor", 2, 0, 0)
                    .MapBitVariable("Motor", 2, 0, 1)

@@ -61,9 +61,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\PLC\IPLCComunication.cs" />
+    <Compile Include="Domain\PLC\IPLCCommunication.cs" />
     <Compile Include="Domain\PLC\PLCS71500.cs" />
-    <Compile Include="Domain\ProgrammingLogicController.cs" />
+    <Compile Include="Domain\ProgrammableLogicController.cs" />
     <Compile Include="Domain\Types\Bit.cs" />
     <Compile Include="Domain\Types\IType.cs" />
     <Compile Include="Domain\Types\Word.cs" />

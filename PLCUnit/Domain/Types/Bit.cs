@@ -8,12 +8,12 @@ namespace PLC.Domain.Types
         public string Symbol => "X";
 
 
-        private readonly IPLCComunication _pLCComunication;
+        private readonly IPLCCommunication _pLCComunication;
         private readonly int _dbNumber;
         private readonly int _byteNumber;
         private readonly int _bitNumber;
 
-        public Bit(IPLCComunication pLCComunication,
+        public Bit(IPLCCommunication pLCComunication,
                     int dbNumber,
                     int byteNumber,
                     int bitNumber)
