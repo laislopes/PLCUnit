@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using PLC.Domain;
+using PLC.Domain.PLC;
+using PLCUnit.Domain.PLC;
 using Xunit;
 
 namespace PLC.Test.BottleMachine
@@ -12,7 +14,8 @@ namespace PLC.Test.BottleMachine
 
         public StationTwoBottleMachineTest()
         {
-            _plc = new ProgrammableLogicController("127.0.0.1");
+            var plcCommunication = PLCFactory.GetPLC71500("127.0.0.1");
+            _plc = new ProgrammableLogicController(plcCommunication);
             _plc.MapBitVariable("Sensor2", 2, 0, 2)
                 .MapBitVariable("Engine1", 4, 0, 1)
                 .MapBitVariable("Engine2", 4, 0, 2);

@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\PLC\IPLCCommunication.cs" />
+    <Compile Include="Domain\PLC\PLCFactory.cs" />
     <Compile Include="Domain\PLC\PLCS71500.cs" />
     <Compile Include="Domain\ProgrammableLogicController.cs" />
     <Compile Include="Domain\Types\Bit.cs" />

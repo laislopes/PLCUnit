@@ -1,5 +1,7 @@
 ﻿using System;
 using PLC.Domain;
+using PLC.Domain.PLC;
+using PLCUnit.Domain.PLC;
 using Xunit;
 
 namespace PLC.Test.Engine
@@ -10,7 +12,8 @@ namespace PLC.Test.Engine
 
         public EngineTest()
         {
-            _plc = new ProgrammableLogicController("127.0.0.1");
+            var plcCommunication = PLCFactory.GetPLC71500("127.0.0.1");
+            _plc = new ProgrammableLogicController(plcCommunication);
             _plc.MapBitVariable("StartButton", 2, 0, 0)
                 .MapBitVariable("Engine", 4, 0, 0);
         }

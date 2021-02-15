@@ -11,10 +11,10 @@ namespace PLC.Domain
         private readonly IPLCCommunication _plc;
         private readonly IDictionary<string, IType> _types;
 
-        public ProgrammableLogicController(string destinationHost)
+        public ProgrammableLogicController(IPLCCommunication pLcCommunication)
         {
             _types = new Dictionary<string, IType>();
-            _plc = new PLCS71500(destinationHost);
+            _plc = pLcCommunication;
             _plc.Open();
             Console.WriteLine("Conexão com CLP estabelecida com sucesso!");
         }
