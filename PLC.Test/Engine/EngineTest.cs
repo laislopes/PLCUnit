@@ -1,6 +1,5 @@
 ﻿using System;
 using PLC.Domain;
-using PLC.Domain.PLC;
 using PLCUnit.Domain.PLC;
 using Xunit;
 

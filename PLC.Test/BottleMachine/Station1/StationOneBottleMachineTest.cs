@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using PLC.Domain;
-using PLC.Domain.PLC;
 using PLCUnit.Domain.PLC;
 using Xunit;
 
