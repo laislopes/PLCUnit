@@ -6,11 +6,11 @@ namespace PLC.Test.Engine
 {
     public class EngineTest : IDisposable
     {
-        private static ProgrammingLogicController _plc;
+        private static ProgrammableLogicController _plc;
 
         public EngineTest()
         {
-            _plc = new ProgrammingLogicController("127.0.0.1");
+            _plc = new ProgrammableLogicController("127.0.0.1");
             _plc.MapBitVariable("StartButton", 2, 0, 0)
                 .MapBitVariable("Engine", 4, 0, 0);
         }

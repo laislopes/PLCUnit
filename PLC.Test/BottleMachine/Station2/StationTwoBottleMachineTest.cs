@@ -8,11 +8,11 @@ namespace PLC.Test.BottleMachine
     [Collection("Serial")]
     public class StationTwoBottleMachineTest : IDisposable
     {
-        private static ProgrammingLogicController _plc;
+        private static ProgrammableLogicController _plc;
 
         public StationTwoBottleMachineTest()
         {
-            _plc = new ProgrammingLogicController("127.0.0.1");
+            _plc = new ProgrammableLogicController("127.0.0.1");
             _plc.MapBitVariable("Sensor2", 2, 0, 2)
                 .MapBitVariable("Engine1", 4, 0, 1)
                 .MapBitVariable("Engine2", 4, 0, 2);
