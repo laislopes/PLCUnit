@@ -11,7 +11,7 @@ namespace PLC.Test.Engine
 
         public EngineTest()
         {
-            var plcCommunication = PLCFactory.GetPLC71500("127.0.0.1");
+            var plcCommunication = PLCFactory.GetPLCS71500("127.0.0.1");
             _plc = new ProgrammableLogicController(plcCommunication);
             _plc.MapBitVariable("StartButton", 2, 0, 0)
                 .MapBitVariable("Engine", 4, 0, 0);

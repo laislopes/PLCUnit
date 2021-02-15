@@ -13,7 +13,7 @@ namespace PLC.Test.BottleMachine
 
         public StationOneBottleMachineTest()
         {
-            var plcCommunication = PLCFactory.GetPLC71500("127.0.0.1");
+            var plcCommunication = PLCFactory.GetPLCS71500("127.0.0.1");
             _plc = new ProgrammableLogicController(plcCommunication);
             _plc.MapBitVariable("Sensor1", 2, 0, 1)
                 .MapBitVariable("Sensor2", 2, 0, 2)
