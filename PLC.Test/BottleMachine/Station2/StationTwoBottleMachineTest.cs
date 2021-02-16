@@ -20,6 +20,7 @@ namespace PLC.Test.BottleMachine
                 .MapBitVariable("Engine2", 4, 0, 2);
         }
 
+        // O motor da Estação 2 deve ser ligado quando o Sensor 2 identifica a garrafa
         [Fact]
         public void ShouldTurnOnEngineTwoWhenSensorTwoDetectsTheBottle()
         {
@@ -53,18 +54,23 @@ namespace PLC.Test.BottleMachine
 
         }
 
+        /* 
+         * O motor da Estação 2 não deve ser ligado, quando o Sensor 2 identifica a garrafa 
+         * e o motor da Estação 1 está desligado
+        */
         [Fact]
         public void ShouldNotTurnOnEngineTwoWhenEngineOneIsDisableAndSensorTwoDetectsTheBottle()
         {
             //Setup
             SetEngineAs(false);
 
-            //Test
             _plc.SetValueByTag("Engine1", false);
             _plc.SetValueByTag("Sensor2", true);
 
-            //Assert
+            //Test
             var engineStatus = Convert.ToBoolean(_plc.GetValueByTag("Engine2"));
+
+            //Assert
             Assert.False(engineStatus);
 
         }
