@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PLCUnit\PLCUnit.csproj" />
+    <ProjectReference Include="..\PLCUnit_Core\PLCUnit.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,8 @@
 ﻿using PLC.Domain;
 using PLC.Domain.PLC;
+using System;
 
-namespace PLC
+namespace PLCUnit_Core
 {
     class Program
     {
@@ -15,6 +16,5 @@ namespace PLC
                    .GetValueByTag("Motor");
             }
         }
-
     }
 }
