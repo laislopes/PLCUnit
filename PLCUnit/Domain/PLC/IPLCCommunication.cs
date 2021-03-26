@@ -1,7 +1,7 @@
 ﻿namespace PLC.Domain.PLC
 {
     /// <summary>
-    /// The <c>IPLCCommunication</c> interface represents the basics PLC communication operations.
+    /// The <c>IPLCCommunication</c> Interface represents the basics PLC communication operations.
     /// </summary>
     /// <remarks>
     /// This interface defines the contract to Write, Read, Close and Open operations in communication with PLC.
